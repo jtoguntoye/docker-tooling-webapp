@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "pass";
-$dbname = "dare";
+$servername = "mysqlserverhost";
+$username = "tooling_user";
+$password = "pass12345";
+$dbname = "toolingdb";
 
 
 // Create connection
