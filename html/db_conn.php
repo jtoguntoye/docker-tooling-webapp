@@ -1,7 +1,7 @@
 <?php
 $servername = "mysqlserverhost";
-$username = "tooling_user";
-$password = "pass12345";
+$username = "admin";
+$password = "pass1234";
 $dbname = "toolingdb";
 
 
