@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  tooling_frontend:
+    build: .
+    ports: 
+      - 5000:80
+    volumes:
+      - tooling_frontend:/var/www/html  
+    depends_on:
+      - db
+  
+  db:
+    image: mysql:5.7
+    hostname: mysqlserverhost
+    restart: always
+    environment: 
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_ROOT_PASSWORD: ${ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_USER_PASSWORD}
+    volumes:
+     - db:/var/lib/mysql
+
+volumes:
+  tooling_frontend:
+  db:
